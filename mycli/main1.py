@@ -20,7 +20,8 @@ def get_table_column(tb_name):
 # This functin will give tables list
 def get_table_list():
     inspector = inspect(engine)
-    print("#### Table List ####")
-    print(engine.table_names())
+    # print("#### Table List ####")
+    table_list = engine.table_names()
+    return table_list
 
 

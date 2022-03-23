@@ -1,9 +1,6 @@
-autopep8==1.6.0
-flake8==4.0.1
 mccabe==0.6.1
--e git+https://github.com/MilanBariya/CLI_project.git@dc2d753652aea76eae80666d088b36a17a4530e8#egg=mycli_cli
+-e git+https://github.com/MilanBariya/CLI_project.git@5fbabed9bf2f394726fee49bf77929127de5e06e#egg=mycli_cli
 pycodestyle==2.8.0
-pyflakes==2.4.0
 PyMySQL==1.0.2
 SQLAlchemy==1.4.32
 toml==0.10.2

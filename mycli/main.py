@@ -8,31 +8,16 @@ connection = engine.connect()
 metadata = MetaData()
 
 
-# Print full table metadata
-# print(repr(metadata.tables['offices']))
-# ensus = Table('offices', metadata, autoload=True, autoload_with=engine)
-
-
 # This Function will give columns name
 def get_table_column(tb_name):
 
     tb = Table(tb_name, metadata, autoload=True, autoload_with=engine)
     columns = tb.columns.keys()
-    print("#### columns ####")
-    for column in columns:
-        print(column)
-
-
-# table_name_from_user = argv[1]
-# print("table name given by you:", table_name_from_user)
-
-# get_table_column(table_name_from_user)
+    return columns
 
 
 # This functin will give tables list
 def get_table_list():
     inspector = inspect(engine)
-    print(engine.table_names())
-
-
-get_table_list()
+    table_list = engine.table_names()
+    return table_list

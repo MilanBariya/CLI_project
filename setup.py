@@ -1,10 +1,10 @@
 from setuptools import setup
 setup(
-    name='helloworld-cli',
+    name='mycli-cli',
     version='0.1.0',
-    packages=['helloworld'],
+    packages=['mycli'],
     entry_points={
         'console_scripts': [
-            'helloworld = helloworld.__main__:main'
+            'mycli = mycli.__main__:main'
         ]
     })

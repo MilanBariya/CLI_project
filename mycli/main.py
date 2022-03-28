@@ -1,11 +1,39 @@
 from sqlalchemy import create_engine, MetaData, Table, inspect
 from sys import argv
+import json
+from clickhouse_driver import Client
 
 
-engine = create_engine('mysql+pymysql://root:1222412224@127.0.0.1/sql_hr')
+# This function will set engine
+def set_engine(eng):
+    global data, engine, connection, metadata
 
-connection = engine.connect()
-metadata = MetaData()
+    if eng == "mysql":
+        details = open("mysql_detail.json")
+        engine_name = "mysql+pymysql"
+
+    elif eng == "clickhouse":
+        details = open("clickhouse_detail.json")
+        engine_name = "clickhouse"
+
+    data = json.load(details)
+    username = data.get("username")
+    password = data.get("password", "")
+    host = data.get("host")
+    db = data.get("db")
+
+    engine = create_engine(
+        f"{engine_name}://{username}:{password}@{host}/{db}")
+    connection = engine.connect()
+    metadata = MetaData()
+
+
+try:
+    f = open("temp.txt", "r")
+    val = f.readline()
+    set_engine(val)
+except Exception as e:
+    print(e)
 
 
 # This Function will give columns name

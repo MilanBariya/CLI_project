@@ -1,6 +1,23 @@
+autopep8==1.6.0
+certifi==2021.10.8
+cffi==1.15.0
+charset-normalizer==2.0.12
+clickhouse-driver==0.2.3
+clickhouse-sqlalchemy==0.2.0
+cryptography==36.0.2
+flake8==4.0.1
+idna==3.3
 mccabe==0.6.1
--e git+https://github.com/MilanBariya/CLI_project.git@5fbabed9bf2f394726fee49bf77929127de5e06e#egg=mycli_cli
+-e git+https://github.com/MilanBariya/CLI_project.git@aa77c06d8d605a7194cb21f70257fbe1fe1c2240#egg=mycli_cli
 pycodestyle==2.8.0
+pycparser==2.21
+pyflakes==2.4.0
 PyMySQL==1.0.2
+pytz==2022.1
+pytz-deprecation-shim==0.1.0.post0
+requests==2.27.1
 SQLAlchemy==1.4.32
 toml==0.10.2
+tzdata==2022.1
+tzlocal==4.1
+urllib3==1.26.9

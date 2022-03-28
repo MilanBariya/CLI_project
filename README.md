@@ -9,3 +9,5 @@ Command List to work with Mycli Project
 > This will give columns name of employees table_list [Second argument is table name]
 > It will give error message when you give wrong table name or not give table name or multiple tables name.
 
+3) mycli set_engine mysql
+> This will give set engine mysql

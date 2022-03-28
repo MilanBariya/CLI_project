@@ -3,5 +3,7 @@
     "username": "default",
     "password": "",
     "host": "localhost:8123",
-    "db":"db1"
+    "db":"db1",
+    "eng":"clickhouse",
+    "engine_name":"clickhouse"
 }

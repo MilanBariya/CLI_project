@@ -5,36 +5,30 @@ from clickhouse_driver import Client
 
 
 # This function will set engine
-def set_engine(eng):
+def set_engine(eng, fname=None):
     global data, engine, connection, metadata
-
-    if eng == "mysql":
-        details = open("mysql_detail.json")
-        engine_name = "mysql+pymysql"
-
-    elif eng == "clickhouse":
-        details = open("clickhouse_detail.json")
-        engine_name = "clickhouse"
-
+ 
+    details = open(fname)
     data = json.load(details)
     username = data.get("username")
     password = data.get("password", "")
     host = data.get("host")
     db = data.get("db")
+    engine_name = data.get("engine_name")
+    
 
     engine = create_engine(
         f"{engine_name}://{username}:{password}@{host}/{db}")
     connection = engine.connect()
     metadata = MetaData()
 
-
 try:
     f = open("temp.txt", "r")
     val = f.readline()
-    set_engine(val)
+    filename = f.readline()
+    set_engine(val.strip(), filename.strip())
 except Exception as e:
     print(e)
-
 
 # This Function will give columns name
 def get_table_column(tb_name):

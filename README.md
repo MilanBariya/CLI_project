@@ -2,12 +2,14 @@ Welcome to Mycli project!!!!!
 
 Command List to work with Mycli Project
 
-1) mycli get_tables
-> This will give list of tables
+1) mycli seteng --engine clickhouse clickhouse_detail.json
+> This will set engine clickhouse
 
-2) mycli get_columns employees 
-> This will give columns name of employees table_list [Second argument is table name]
-> It will give error message when you give wrong table name or not give table name or multiple tables name.
+2) mycli gettables
+> This will get tables 
 
-3) mycli set_engine mysql
-> This will give set engine mysql
+3) mycli getcolumn --table test1
+> This will get columns names
+
+4) mycli --help
+> This will give commands list and details of commands

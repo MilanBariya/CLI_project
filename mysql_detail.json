@@ -3,5 +3,7 @@
     "username": "root",
     "password": "1222412224",
     "host": "127.0.0.1",
-    "db":"sql_hr"
+    "db":"sql_hr",
+    "eng":"mysql",
+    "engine_name":"mysql+pymysql"
 }

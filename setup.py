@@ -5,6 +5,6 @@ setup(
     packages=['mycli'],
     entry_points={
         'console_scripts': [
-            'mycli = mycli.__main__:main'
+            'mycli = mycli.__main__:cli'
         ]
     })
